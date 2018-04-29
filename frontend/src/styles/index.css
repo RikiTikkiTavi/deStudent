@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*NAVIGATION*/
+
+/*HEADER HOME*/
+header.header-home {
+	padding: 300px 100px;
+	background: url('https://www.study-in.de/images/layout/start_back.jpg') center bottom no-repeat;
+	background-size: 100% auto;
+}
+
+header a.btn {
+	margin: 0 10px
+}
+
+@media (min-width: 992px) {
+	header.header-home {
+		padding: 300px 100px;
+	}
+}
+
+/*HEADER PAGE*/
+header.header-page {
+	padding: 150px 0px 50px 100px;
+	background: url('https://www.study-in.de/images/layout/start_back.jpg') no-repeat;
+}
+
+@media (min-width: 992px) {
+	header.header-page {
+		padding: 140px 0px 50px 100px;
+	}
+}
+
+/*--> BREADCRUMBS*/
+
+.de-student-breadcrumb{
+	background-color: #e9ecef;
+}
+
+.de-student-breadcrumb ol{
+	padding-left: 0;
+}

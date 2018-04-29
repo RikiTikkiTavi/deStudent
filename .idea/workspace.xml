@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c7454c1-2281-44a8-b4ae-ec1d28b89526" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5c7454c1-2281-44a8-b4ae-ec1d28b89526" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -165,7 +163,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="9.2.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -222,7 +220,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524957201155</updated>
-      <workItem from="1524957202587" duration="6564000" />
+      <workItem from="1524957202587" duration="6732000" />
     </task>
     <task id="LOCAL-00001" summary="Structure configured">
       <created>1524963428461</created>
@@ -245,24 +243,31 @@
       <option name="project" value="LOCAL" />
       <updated>1524963676104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="frontend">
+      <created>1524963850638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524963850638</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6564000" />
+    <option name="totallyTimeSpent" value="6732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50106835" side_tool="true" weight="0.32858709" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005342" side_tool="true" visible="true" weight="0.32858709" />
       <window_info anchor="bottom" id="NativeScript" order="11" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946582" weight="0.31325302" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49946582" weight="0.32968238" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49893162" visible="true" weight="0.32858709" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49893162" weight="0.32858709" />
       <window_info anchor="right" id="Remote Host" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4976744" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4976744" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info id="Structure" order="1" sideWeight="0.5023256" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
