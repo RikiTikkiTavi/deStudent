@@ -1,8 +1,22 @@
-const express = require("express");
-const os = require("os");
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+
 const app = express();
-app.use(express.static("dist"));
-app.get("/api/getUsername", (req, res) =>
-	res.send({ username: os.userInfo().username })
-);
-app.listen(8080, () => console.log("Listening on port 8080!"));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+/* ROUTES */
+/* payment */
+const api = require('./routes/api');
+
+app.use('/api', api);
+
+app.use(express.static('dist'));
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
+
+app.listen(8080, () => console.log('Listening on port 8080!'));

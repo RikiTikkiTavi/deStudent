@@ -44,3 +44,8 @@ header.header-page {
 .de-student-breadcrumb ol{
 	padding-left: 0;
 }
+
+.pay-block{
+	border: #e3e3e3 1px solid;
+	padding: 15px;
+}
