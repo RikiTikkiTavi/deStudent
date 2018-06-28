@@ -18,8 +18,17 @@ router.post('/payment_ver', (req, res) => {
   });
 
   function handleResponse(response) {
-    /* handle verification */
-    res.send(response.body.state);
+    resolvers.Query.getServiceContent({ id: 1 }).then(serviceContent => {
+      if (
+        response.body.state === 'approved' &&
+        // CHECK AMOUNT OF PAYMENT
+        response.body.transactions[0].amount.total === serviceContent.price
+      ) {
+        res.send(serviceContent);
+      } else {
+        res.send('HandleResponse Error');
+      }
+    });
   }
 
   function handleError(err) {
@@ -38,6 +47,8 @@ router.post('/payment_ver', (req, res) => {
       handleError(err);
     });
 });
+
+/* GET SERVICE TEST */
 router.get('/getService', (req, res) => {
   resolvers.Query.getServiceContent({ id: 1 }).then(serviceContent => {
     res.send(serviceContent);

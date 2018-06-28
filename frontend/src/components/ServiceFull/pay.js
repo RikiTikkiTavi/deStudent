@@ -6,13 +6,22 @@ import PaypalExpressBtn from 'react-paypal-express-checkout';
 import axios from 'axios';
 
 class Pay extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      enabled: true
+    };
+  }
+
   onPaymentSuccess(payment) {
     axios
       .post('/api/payment_ver', {
         payment
       })
       .then(response => {
-        console.log(response);
+        console.log(response.data);
+        this.setState({ enabled: false });
+        this.props.handleSuccessfulPayment(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -20,6 +29,7 @@ class Pay extends Component {
   }
 
   render() {
+    const { enabled } = this.state;
     const { formData } = this.props;
 
     const style = {
@@ -75,30 +85,48 @@ class Pay extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="pay-block col-12 text-center bg-light">
-              <PaypalExpressBtn
-                onSuccess={this.onPaymentSuccess.bind(this)}
-                shipping={shipping}
-                env={env}
-                style={style}
-                client={client}
-                currency={currency}
-                total={total}
-              />
+            <div className=" col-12 text-center ">
+              <div className="pay-block bg-light">
+                <PaypalExpressBtn
+                  onSuccess={this.onPaymentSuccess.bind(this)}
+                  shipping={shipping}
+                  env={env}
+                  style={style}
+                  client={client}
+                  currency={currency}
+                  total={total}
+                />
+              </div>
             </div>
           </div>
         </Fragment>
       );
     }
 
-    return content;
+    const message = (
+      <Fragment>
+        <div className="row">
+          <div className="col-12">
+            <div className="alert alert-warning" role="alert">
+              Вы ужи произвели покупку
+            </div>
+          </div>
+        </div>
+      </Fragment>
+    );
+
+    if (enabled) {
+      return content;
+    }
+    return message;
   }
 }
 
 Pay.propTypes = {
   dispatch: PropTypes.func,
   formData: PropTypes.object,
-  FORM: PropTypes.object
+  FORM: PropTypes.object,
+  handleSuccessfulPayment: PropTypes.func
 };
 
 export default connect((state, props, dispatch) => ({
