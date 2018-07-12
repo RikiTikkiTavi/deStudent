@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) =>
     'service_content',
     {
       id: {
-        type: DataTypes.INTEGER(11),
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true

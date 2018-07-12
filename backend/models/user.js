@@ -1,19 +1,28 @@
 module.exports = (sequelize, DataTypes) =>
   sequelize.define(
-    'service_form',
+    'user',
     {
       id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
+        unique: true
       },
-      values: {
+      email: {
         type: DataTypes.TEXT,
         allowNull: false
+      },
+      password: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      name: {
+        type: DataTypes.TEXT,
+        allowNull: true
       }
     },
     {
-      tableName: 'service_form'
+      tableName: 'user'
     }
   );

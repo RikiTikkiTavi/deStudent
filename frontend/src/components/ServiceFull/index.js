@@ -9,6 +9,8 @@ import Form from "./form";
 import ServiceFullDescription from "./service-full-description";
 import Pay from "./pay";
 import ServiceInfo from "./service-info";
+import ServiceSteps from "./service-steps";
+import axios from "axios/index";
 
 /*TODO 1: Form save function -> action to change component, or via ROUTER->render ServiceFull component with new property (think is better)
   TODO:	OR on property in state and if statements
@@ -28,8 +30,8 @@ class ServiceFull extends Component {
 
   }
 
-  SERVICE = SERVICES.find((service) => service.id === this.props.match.params.id);
-  FORM = FORMS.find((form) => form.id === this.SERVICE.form_name);
+  SERVICE = SERVICES.find((service) => service.id === parseInt(this.props.match.params.id));
+  FORM = FORMS.find((form) => form.id === this.SERVICE.id);
 
   componentDidMount() {
     const filledFormData = this.props.filledFormData;
@@ -63,38 +65,54 @@ class ServiceFull extends Component {
     this.setState({ [id]: value });
   }
 
-  handleNext(){
+  handleNext() {
     this.props.history.push(this.props.match.params.id + "/form");
     this.setState({
       step: this.props.match.params.step
     });
   }
 
-  handleServiceFormSubmit(e) {
-    e.preventDefault();
+  handleServiceFormSubmit() {
 
     //TODO: IF FormFrontendCheck == OK continue:
 
     const stateCopy = { ...this.state };
     delete stateCopy.step;
+    delete stateCopy.serviceInfo;
 
-    this.props.dispatch({
-      type: "FORM_SAVED",
-      formData: {
-        formId: this.FORM.id,
-        values: stateCopy
-      }
-    });
+    const formData = {
+      formId: this.FORM.id,
+      values: stateCopy
+    };
 
-    this.FORM.fields.map((field) => {
-      this.formValues.push(
-        { [field.id]: this.state[field.id] }
-      );
-    });
-    this.props.history.push("./pay");
-    this.setState({
-      step: "pay"
-    });
+    axios
+      .post("/api/save_form", {
+        formData
+      })
+      .then(response => {
+
+        console.log("FORM CREATION RESPONSE", response);
+
+        this.props.dispatch({
+          type: "FORM_SAVED",
+          formData: formData
+        });
+
+
+        this.FORM.fields.map((field) => {
+          this.formValues.push(
+            { [field.id]: this.state[field.id] }
+          );
+        });
+        this.props.history.push("./pay");
+        this.setState({
+          step: "pay"
+        });
+
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
   }
 
@@ -119,7 +137,7 @@ class ServiceFull extends Component {
         is_active: false
       }
     ];
-    if(step=== 'form'){
+    if (step === "form") {
       BREADCRUMBS.push({
         title: "Форма",
         link: "/services/" + SERVICE.id + "/" + step,
@@ -201,11 +219,7 @@ class ServiceFull extends Component {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-12">
-              <p> Заполнить форму > Оплатить > Получить информацию</p>
-            </div>
-          </div>
+          <ServiceSteps activeStep={step}/>
 
           {content}
 

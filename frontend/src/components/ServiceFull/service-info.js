@@ -4,7 +4,15 @@ import { connect } from 'react-redux';
 
 class ServiceInfo extends Component {
   render() {
-    return <Fragment>HI {this.props.serviceInfo.content}</Fragment>;
+    return (
+      <Fragment>
+        <div className="row">
+          <div className="col-12">
+            <p>{this.props.serviceInfo.content}</p>
+          </div>
+        </div>
+      </Fragment>
+    );
   }
 }
 

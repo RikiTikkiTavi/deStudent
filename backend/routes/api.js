@@ -5,6 +5,17 @@ const express = require('express');
 
 const router = express.Router();
 
+/* SAVING AND CHECKING FORM */
+
+router.post('/save_form', (req, res) => {
+  req.body.formData.values = JSON.stringify(req.body.formData.values);
+  resolvers.Creation.createServiceForm(req.body.formData).then(
+    creationResponse => {
+      res.send(creationResponse);
+    }
+  );
+});
+
 /* PAYMENT */
 router.post('/payment_ver', (req, res) => {
   const reqUrl = `v1/payments/payment/${req.body.payment.paymentID}`;
