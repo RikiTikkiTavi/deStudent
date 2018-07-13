@@ -1,0 +1,19 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:3000/api/login
+Accept: */*
+Cache-Control: no-cache
+email="e.l@gmail.com"&value="root"
+###
+
+GET http://localhost:3000/api/is_logged_in
+Accept: */*
+Cache-Control: no-cache
+Cookie: connect.sid=s%3AG8BToZPK4PmpTR-XH0dhjOLshnSTDlSb.5OxaYCSb44rNNLJI2LWCBZy76Cs2tiLTFJeNAL4LYnk;
+
+###

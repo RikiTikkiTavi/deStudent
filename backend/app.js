@@ -1,11 +1,24 @@
+import configurePassport from './passconfig';
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const session = require('express-session');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(
+  session({
+    secret: 'SJKd23aHSlDJK128sa1u9LLSjd57tuUXSkp',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 /* ROUTES */
 /* payment */

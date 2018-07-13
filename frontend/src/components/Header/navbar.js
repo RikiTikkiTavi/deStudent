@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Route, Switch } from 'react-router-dom';
+import LoginForm from './login-form';
 
 class Navbar extends Component {
+
   render() {
     return (
       <nav
@@ -23,7 +25,7 @@ class Navbar extends Component {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/services">
                   Услуги
@@ -35,6 +37,7 @@ class Navbar extends Component {
                 </a>
               </li>
             </ul>
+            <LoginForm />
           </div>
         </div>
       </nav>

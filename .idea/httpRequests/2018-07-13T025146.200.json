@@ -1,0 +1,20 @@
+{
+  "args": {},
+  "data": "{\n  \"email\": \"e.l@gmail.com\",\n  \"value\": \"root\"\n}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept-Encoding": "gzip,deflate",
+    "Connection": "close",
+    "Content-Length": "49",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)"
+  },
+  "json": {
+    "email": "e.l@gmail.com",
+    "value": "root"
+  },
+  "origin": "141.30.28.19",
+  "url": "https://httpbin.org/post"
+}

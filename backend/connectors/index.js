@@ -1,5 +1,7 @@
 /* eslint-disable import/no-dynamic-require,import/prefer-default-export */
 import Sequelize from 'sequelize';
+
+const chalk = require('chalk');
 // import DataLoader from 'dataloader';
 //
 // import casual from 'casual';
@@ -15,16 +17,16 @@ const dbConnection = new Sequelize(
   config.database,
   config.username,
   config.password,
-  config,
+  config
 );
 
 dbConnection
   .authenticate()
   .then(() => {
-    console.warn('===Successfull Connection===');
+    console.warn(chalk.green('===Successfull Connection==='));
   })
   .catch(err => {
-    console.error('Unable to connect to database:', err);
+    console.error(chalk.red('Unable to connect to database:'), err);
   });
 
 defineModels(dbConnection, Sequelize);

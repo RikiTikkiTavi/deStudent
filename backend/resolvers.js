@@ -4,6 +4,9 @@ const resolvers = {
   Query: {
     getServiceContent(args) {
       return ServiceContent.find({ where: args });
+    },
+    getOneUser(args) {
+      return User.findOne({ where: args });
     }
   },
   Creation: {

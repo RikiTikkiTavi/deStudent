@@ -30,10 +30,11 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     port: 3000,
-    open: true,
+    open: false,
     historyApiFallback: true,
     proxy: {
-      '/api/*': 'http://localhost:8080'
+      '/api/*': 'http://localhost:8080',
+      '/login/*': 'http://localhost:8080'
     }
   },
   plugins: [

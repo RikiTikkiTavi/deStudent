@@ -1,370 +1,406 @@
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032901.200.json
+<> 2018-07-13T033026.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032647.200.json
+<> 2018-07-13T032640.500.html
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/is_logged_in?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032630.200.json
+<> 2018-07-13T032636.404.html
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032552.200.json
+<> 2018-07-13T032628.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032551.200.json
+<> 2018-07-13T032519.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032539.200.json
+<> 2018-07-13T032512.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032515.200.json
+<> 2018-07-13T032433.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032438.200.json
+<> 2018-07-13T032424.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T032121.200.json
+<> 2018-07-13T032415.200.html
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/login%20n?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
+<> 2018-07-13T032413.200.html
+
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_i%20n?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
+<> 2018-07-13T032242.200.html
+
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_i%20n?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
+<> 2018-07-13T032146.200.html
+
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031808.200.json
+<> 2018-07-13T032134.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031651.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031605.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031604.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031524.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031523.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031440.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031343.200.json
-
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T031332.200.html
-
-###
-
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=test@test&password=1
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=test@test&password=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T031046.200.json
+
+###
+
+GET http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T030723.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T030716.200.html
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T030258.500.html
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T030723-2.200.json
+<> 2018-07-13T030245.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T030723-1.200.json
+<> 2018-07-13T030233.200.html
 
 ###
 
-GET http://localhost:3000/api/getService
+POST http://localhost:3000/api/login
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-06-24T030723.200.json
+email="e.l@gmail.com"&value="root":
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T030655.200.json
+POST http://localhost:3000/api/login
+Content-Type: application/x-www-form-urlencoded
+email="e.l@gmail.com"&value="root":
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T030440.200.json
+POST http://localhost:3000/api/login
+Content-Type: application/x-www-form-urlencoded
+email="e.l@gmail.com"&value="root":
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
+Cookie: connect.sid=s%3AG8BToZPK4PmpTR-XH0dhjOLshnSTDlSb.5OxaYCSb44rNNLJI2LWCBZy76Cs2tiLTFJeNAL4LYnk;
 
-<> 2018-06-24T030439.200.json
+<> 2018-07-13T025920.200.html
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
+Cookie: connect.sid=s%3AG8BToZPK4PmpTR-XH0dhjOLshnSTDlSb.5OxaYCSb44rNNLJI2LWCBZy76Cs2tiLTFJeNAL4LYnk
 
-<> 2018-06-24T030429.200.json
+<> 2018-07-13T025856.200.html
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
+POST http://localhost:3000/api/login
+Content-Type: application/json
 
-<> 2018-06-24T030428.200.json
+{
+  "email": "e.l@gmail.com",
+  "value": "root"
+}
 
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T030307.200.json
+<> 2018-07-13T025704.400.txt
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
+POST http://localhost:3000/api/login
+Content-Type: application/json
 
-<> 2018-06-24T025944.200.json
+{
+  "email": "e.l@gmail.com",
+  "value": "root"
+}
 
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T025533.200.json
+<> 2018-07-13T025333.400.txt
 
 ###
 
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
+POST https://httpbin.org/post
+Content-Type: application/json
 
-<> 2018-06-24T025432.500.html
+{
+  "email": "e.l@gmail.com",
+  "value": "root"
+}
 
-###
-
-GET http://localhost:3000/api/getService
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-06-24T025150.500.html
+<> 2018-07-13T025146.200.json
 
 ###
 
-GET http://localhost:3000/api/getService
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
+Cookie: connect.sid=s%3AnGOwWgKeTbkWV1pedUdEia4Ek_Pszqxa.HZUZqzRbv98KSpHGWr902Mdahc5za9KQF8LPvjZ44%2BM
 
-<> 2018-06-24T022134.504.txt
+<> 2018-07-13T024942.200.html
 
 ###
 
-GET http://localhost:3000/api/getService?payment=""
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-06-24T022121.504.txt
+<> 2018-07-13T024640.200.html
 
 ###
 
-GET http://localhost:8080/?payment=""
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T024635.200.html
 
 ###
 
-GET http://localhost:8080/?payment=""
-Accept: */*
-Cache-Control: no-cache
+GET http://localhost:3000/api/is_logged_in
+Accepts: application/json
+
+<> 2018-07-13T024553.200.html
 
 ###
 
-GET http://localhost:8080/api?payment=""
+GET http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T023727.200.html
 
 ###
 
-GET http://localhost:8080/api?payment=""
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T023651.200.json
 
 ###
 
-GET http://localhost:8080/api/getService?payment=""
+GET http://localhost:3000/api/is_logged_in
+set-cookie: connect.sid=s%3AGTX7h3JHTAopx-WlyIsxKte7inCsX0zz.6xc9S8%2FcR%2FY2rC3jPEzlm%2BmKKXgk5W2m31rVkO2AoeI; Path=/; HttpOnly
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T023510.200.html
 
 ###
 
-GET http://localhost:8080/api/getService?payment=""
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-07-13T023439.200.json
 
 ###
 
-POST http://localhost:8080/api/payment_ver?payment=""
+GET http://localhost:3000/api/is_logged_in
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-05-06T111911.500.html
+<> 2018-07-13T023403.200.html
 
 ###
 
-POST http://localhost:8080/api/payment_ver?payment={}
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-05-06T111847.500.html
+<> 2018-07-13T023343.200.json
+
+###
+
+POST http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T023335.404.html
+
+###
+
+GET http://localhost:3000/api/is_logged_in
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T023328.200.html
+
+###
+
+GET http://localhost:3000/api/is_logged_in
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T023047.504.txt
+
+###
+
+POST http://localhost:3000/api/is_logged_in?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T023024.404.html
+
+###
+
+POST http://localhost:3000/api/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T023003.200.json
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T022952.404.html
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T020305.404.html
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T014919.404.html
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T014855.500.html
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T014715.404.html
+
+###
+
+POST http://localhost:3000/login?email=e.l@gmail.com&password=root
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-13T014223.500.html
 
 ###
 
