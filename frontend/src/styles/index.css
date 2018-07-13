@@ -76,3 +76,8 @@ header.header-page {
 .service-list__container .card{
 	margin: 20px 0;
 }
+
+.navbar__login b, .navbar__login .form-inline{
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+}

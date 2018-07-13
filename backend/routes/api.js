@@ -2,6 +2,7 @@ import resolvers from '../resolvers';
 import saveForm from './save-form.api';
 import paymentVer from './payment-ver.api';
 import { login, auth, isLoggedIn } from './login.api';
+import logout from './logout.api';
 
 const express = require('express');
 
@@ -24,8 +25,8 @@ router.get('/getService', (req, res) => {
 router.post('/login', auth(), (req, res) => login(req, res));
 router.get('/is_logged_in', (req, res) => isLoggedIn(req, res));
 
-/* router.post('/register', (req, res) => register(req, res));
-router.post('/logout', (req, res) => logout(req, res)); */
+/* router.post('/register', (req, res) => register(req, res)); */
+router.post('/logout', (req, res) => logout(req, res));
 
 /* HANDLE INDEX */
 router.get('/', (req, res) => {

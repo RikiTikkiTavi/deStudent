@@ -13,9 +13,7 @@ class LoginForm extends Component {
     };
   }
 
-  asyncIsLoggedIn() {
-
-  }
+  asyncIsLoggedIn() {}
 
   componentDidMount() {
     this._asyncRequest = axios
@@ -53,6 +51,23 @@ class LoginForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  handleLogout(e) {
+    e.preventDefault();
+    axios
+      .post('/api/logout', {})
+      .then(() => {
+        this.setState({
+          loginData: {
+            loggedIn: false,
+            name: ''
+          }
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const data = {
@@ -76,10 +91,7 @@ class LoginForm extends Component {
 
   render() {
     if (this.state.loginData === null) {
-      return (
-        <span style={{ color: 'white' }}>
-        </span>
-      );
+      return <span style={{ color: 'white' }} />;
     }
     const { loggedIn, name } = this.state.loginData;
     let html = (
@@ -111,9 +123,18 @@ class LoginForm extends Component {
     );
     if (loggedIn) {
       html = (
-        <span style={{ color: 'white' }}>
-          <b>Hi, {name}</b>
-        </span>
+        <ul className="navbar-nav ml-auto navbar__login">
+          <span className="navbar-text">
+            <b>Hi, {name}</b>
+          </span>
+          <form className="form-inline">
+            <button
+              onClick={this.handleLogout.bind(this)}
+              className="btn btn-primary my-2 my-sm-0 btn-sm">
+              Logout
+            </button>
+          </form>
+        </ul>
       );
     }
 
