@@ -13,8 +13,6 @@ class LoginForm extends Component {
     };
   }
 
-  asyncIsLoggedIn() {}
-
   componentDidMount() {
     this._asyncRequest = axios
       .get('/api/is_logged_in', {})
@@ -109,29 +107,43 @@ class LoginForm extends Component {
           className="form-control mr-sm-2 form-control-sm"
           name="password"
           type="password"
-          placeholder="Password"
+          placeholder="Пароль"
           aria-label="Password"
           value={this.state.password}
           onChange={this.handleChange.bind(this)}
         />
-        <button
-          onClick={this.handleSubmit.bind(this)}
-          className="btn btn-primary my-2 my-sm-0 btn-sm">
-          Login
-        </button>
+        <div className="btn-group btn-group-sm">
+          <button
+            onClick={this.handleSubmit.bind(this)}
+            className="btn btn-primary my-2 my-sm-0 btn-sm">
+            Вход
+          </button>
+          <button
+            type="button"
+            className="login-form__toggle btn my-2 my-sm-0 btn-sm btn-primary dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <span className="sr-only">Toggle Dropdown</span>
+          </button>
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="#">Вход</a>
+            <a className="dropdown-item" href="#">Регистрация</a>
+          </div>
+        </div>
       </form>
     );
     if (loggedIn) {
       html = (
         <ul className="navbar-nav ml-auto navbar__login">
           <span className="navbar-text">
-            <b>Hi, {name}</b>
+            <b>Привет, {name}</b>
           </span>
           <form className="form-inline">
             <button
               onClick={this.handleLogout.bind(this)}
               className="btn btn-primary my-2 my-sm-0 btn-sm">
-              Logout
+              Выход
             </button>
           </form>
         </ul>

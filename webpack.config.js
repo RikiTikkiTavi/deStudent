@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const outputDirectory = 'dist';
 module.exports = {
@@ -24,11 +27,24 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: 'images/[hash]-[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
+    host: '0.0.0.0',
     port: 3000,
     open: false,
     historyApiFallback: true,
@@ -43,6 +59,9 @@ module.exports = {
       template: './public/index.html',
       favicon: './public/favicon.ico'
     }),
-    new FriendlyErrorsWebpackPlugin()
+    new FriendlyErrorsWebpackPlugin(),
+    new ManifestPlugin({
+      fileName: 'asset-manifest.json'
+    })
   ]
 };

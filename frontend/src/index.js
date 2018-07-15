@@ -1,3 +1,4 @@
+/* eslint-disable import/first */
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,11 +11,14 @@ import Services from './components/ServiceList';
 import ServiceFull from './components/ServiceFull/index';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'jquery/dist/jquery.min';
+import 'bootstrap/dist/js/bootstrap.min';
+
 import './styles/index.css';
 import './styles/print.css';
 import BrowserRouter from 'react-router-dom/es/BrowserRouter';
 
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
 class Root extends Component {
   render() {
@@ -50,4 +54,5 @@ ReactDOM.render(<Root />, document.getElementById('root'));
  * chromium-browser --user-data-dir=/tmp/foo --unsafely-treat-insecure-origin-as-secure=http://localhost:3003
  *
  */
-// registerServiceWorker();
+registerServiceWorker();
+// require('offline-plugin/runtime').install();

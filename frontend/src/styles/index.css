@@ -8,30 +8,45 @@ body {
 
 /*HEADER HOME*/
 header.header-home {
-	padding: 300px 100px;
-	background: url('https://www.study-in.de/images/layout/start_back.jpg') center bottom no-repeat;
+	min-height: 600px;
+	padding: 250px 0;
+	height: 90vh;
+	background: url('../images/start_back.jpg') center bottom no-repeat;
 	background-size: 100% auto;
 }
 
 header a.btn {
 	margin: 0 10px
 }
-
-@media (min-width: 992px) {
+@media (max-width: 767px) {
+	header a.btn {
+		margin-top: 10px;
+		padding: 0.375rem 0.75rem;
+		font-size: 1rem
+	}
 	header.header-home {
-		padding: 300px 100px;
+		padding: 150px 0;
 	}
 }
 
 /*HEADER PAGE*/
 header.header-page {
-	padding: 150px 0px 50px 100px;
-	background: url('https://www.study-in.de/images/layout/start_back.jpg') no-repeat;
+	padding: 150px 0 50px 0;
+	background: url('../images/start_back.jpg') no-repeat;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 767px) {
 	header.header-page {
-		padding: 140px 0px 50px 100px;
+		padding: 100px 0 25px 0;
+	}
+	.header-page__heading{
+		font-size: 2rem
+	}
+}
+
+@media (max-width: 377px) {
+	.header-page__heading{
+		font-size: 1.5rem
 	}
 }
 
@@ -52,10 +67,37 @@ header.header-page {
 
 .step_circle{
 	border: 1px solid #e3e3e3!important;
-	border-radius: 50%;
-	width: 190px;
-	height: 190px;
-	padding: 30px 10px;
+	border-radius: 0.25rem;
+	padding-top: 20px;
+	-ms-flex: 0 0 20%!important;
+	flex: 0 0 20%!important;
+}
+
+@media (max-width: 767px) {
+	.step_circle p{
+		font-size: 0.7rem
+	}
+}
+
+@media (max-width: 550px) {
+	.step_circle h1{
+		font-size: 2rem
+	}
+}
+
+@media (max-width: 445px) {
+	.step_circle{
+		padding-top: 10px;
+	}
+	.step_circle p{
+		font-size: 0.5rem
+	}
+}
+
+@media (max-width: 325px) {
+	.step_circle p{
+		font-size: 0.45rem
+	}
 }
 
 .step_circle.active{
@@ -73,6 +115,7 @@ header.header-page {
 	margin: 30px 0;
 }
 
+
 .service-list__container .card{
 	margin: 20px 0;
 }
@@ -80,4 +123,8 @@ header.header-page {
 .navbar__login b, .navbar__login .form-inline{
 	padding-right: 0.5rem;
 	padding-left: 0.5rem;
+}
+
+.login-form__toggle{
+	border-left: 1px solid #0062cc;
 }

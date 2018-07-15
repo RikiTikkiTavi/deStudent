@@ -4,7 +4,6 @@ import { Link, Route, Switch } from 'react-router-dom';
 import LoginForm from './login-form';
 
 class Navbar extends Component {
-
   render() {
     return (
       <nav
