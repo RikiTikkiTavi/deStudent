@@ -16,6 +16,9 @@ class LoginForm extends Component {
   componentDidMount() {
     this._asyncRequest = axios
       .get('/api/is_logged_in', {})
+      .catch(error => {
+        console.log(error);
+      })
       .then(response => {
         this._asyncRequest = null;
         if (response.data !== false) {
@@ -33,9 +36,6 @@ class LoginForm extends Component {
             }
           });
         }
-      })
-      .catch(error => {
-        console.log(error);
       });
   }
 
@@ -59,11 +59,13 @@ class LoginForm extends Component {
             loggedIn: false,
             name: ''
           }
-        });
+        })
       })
       .catch(error => {
         console.log(error);
-      });
+      })
+      // FIX FOR SERVICE WORKER
+      .then(() => axios.get('/api/is_logged_in', {}));
   }
 
   handleSubmit(e) {
@@ -84,7 +86,9 @@ class LoginForm extends Component {
       })
       .catch(error => {
         console.log(error);
-      });
+      })
+      // FIX FOR SERVICE WORKER
+      .then(() => axios.get('/api/is_logged_in', {}));
   }
 
   render() {
@@ -127,8 +131,12 @@ class LoginForm extends Component {
             <span className="sr-only">Toggle Dropdown</span>
           </button>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="#">Вход</a>
-            <a className="dropdown-item" href="#">Регистрация</a>
+            <a className="dropdown-item" href="#">
+              Вход
+            </a>
+            <a className="dropdown-item" href="#">
+              Регистрация
+            </a>
           </div>
         </div>
       </form>
