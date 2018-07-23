@@ -33,9 +33,13 @@ self.addEventListener('install', event => {
             // We could also cache assets like CSS and images
             const urlsToCache = [
               '/',
+              '/services',
+              '/services/1',
+              '/services/Test',
               assets['main.js'],
               '/manifest.json',
               '/api/is_logged_in',
+              '/api/get_list_of_services',
               assets['favicon.ico'],
               assets['images/start_back.jpg']
             ];
@@ -50,28 +54,6 @@ self.addEventListener('install', event => {
 // Here we intercept request and serve up the matching files
 self.addEventListener('fetch', event => {
   if (doCache) {
-    // cache here is_logged_in on every request, if online
-    /* if (event.request.url.includes('/api/is_logged_in')) {
-      const promiseChain = fetch('/api/is_logged_in', {
-        credentials: 'same-origin'
-      })
-        .catch(error => {
-          console.log('ERROR:', error);
-          caches.match(event.request).then(response => response);
-        })
-        .then(response => {
-          if (response) {
-            console.log('RESPONSE IS OK');
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put('/api/is_logged_in', response)
-              console.log(response);
-              return response;
-            });
-          }
-        });
-      console.log(promiseChain);
-      event.respondWith(promiseChain);
-    } else { */
     if (event.request.url.includes('/api/is_logged_in')) {
       event.respondWith(async function() {
         // Try to get the response from a cache.
@@ -97,6 +79,7 @@ self.addEventListener('fetch', event => {
         caches
           .match(event.request)
           .then(response => response || fetch(event.request))
+          .catch(err => console.log("RespondWith error"))
       );
     }
   }

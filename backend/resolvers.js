@@ -7,6 +7,11 @@ const resolvers = {
     },
     getOneUser(args) {
       return User.findOne({ where: args });
+    },
+    getListOfServices(args) {
+      return ServiceContent.findAll({
+        attributes: ['id', 'name', 'description', 'size']
+      });
     }
   },
   Creation: {

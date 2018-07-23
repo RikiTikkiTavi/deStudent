@@ -19,6 +19,18 @@ module.exports = (sequelize, DataTypes) =>
       price: {
         type: DataTypes.TEXT,
         allowNull: false
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      form_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      size: {
+        type: DataTypes.TEXT,
+        allowNull: false
       }
     },
     {
