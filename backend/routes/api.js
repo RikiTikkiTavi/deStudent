@@ -21,6 +21,16 @@ router.get('/getService', (req, res) => {
   });
 });
 
+/* GET LIST OF SERVICES */
+router.get('/get_list_of_services', (req, res) => {
+  /* TEMPORARY TIMER FOR PRELAOD */
+  setTimeout(() => {
+    resolvers.Query.getListOfServices({}).then(listOfServices => {
+      res.send(listOfServices);
+    });
+  }, 2000);
+});
+
 /* LOGIN */
 router.post('/login', auth(), (req, res) => login(req, res));
 router.get('/is_logged_in', (req, res) => isLoggedIn(req, res));

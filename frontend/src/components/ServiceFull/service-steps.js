@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 class ServiceSteps extends Component {
   render() {
     const classNamesObject = {
-      '': 'col-2 step_circle text-center',
-      form: 'col-2 step_circle text-center',
-      pay: 'col-2 step_circle text-center',
-      info: 'col-2 step_circle text-center'
+      '': 'col-3 step_circle text-center',
+      form: 'col-3 step_circle text-center',
+      pay: 'col-3 step_circle text-center',
+      info: 'col-3 step_circle text-center'
     };
     classNamesObject[this.props.activeStep] += ' active';
     switch (this.props.activeStep) {

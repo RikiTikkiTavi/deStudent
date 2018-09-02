@@ -7,7 +7,6 @@ function auth() {
 }
 
 function login(req, res) {
-  console.log('LOGIN', req);
   res.send(req.user);
 }
 

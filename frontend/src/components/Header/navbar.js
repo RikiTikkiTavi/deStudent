@@ -4,7 +4,6 @@ import { Link, Route, Switch } from 'react-router-dom';
 import UserMenu from './UserMenu'
 
 class Navbar extends Component {
-
   render() {
     return (
       <nav
