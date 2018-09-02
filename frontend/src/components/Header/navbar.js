@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, Route, Switch } from 'react-router-dom';
-import LoginForm from './login-form';
+import UserMenu from './UserMenu'
 
 class Navbar extends Component {
 
@@ -37,7 +37,7 @@ class Navbar extends Component {
                 </a>
               </li>
             </ul>
-            <LoginForm />
+            <UserMenu />
           </div>
         </div>
       </nav>

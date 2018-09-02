@@ -44,10 +44,3 @@ class Root extends Component {
 }
 
 ReactDOM.render(<Root />, document.getElementById('root'));
-
-/**
- * For serviceworker debugging run a chrome instance like the following command
- * chromium-browser --user-data-dir=/tmp/foo --unsafely-treat-insecure-origin-as-secure=http://localhost:3003
- *
- */
-// registerServiceWorker();
