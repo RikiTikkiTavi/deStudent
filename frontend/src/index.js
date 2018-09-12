@@ -10,6 +10,9 @@ import Services from './components/ServiceList';
 import ServiceFull from './components/ServiceFull/index';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min'
+import 'jquery/dist/jquery.min'
+
 import './styles/index.css';
 import './styles/print.css';
 import BrowserRouter from 'react-router-dom/es/BrowserRouter';
