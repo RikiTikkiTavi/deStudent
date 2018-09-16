@@ -2,10 +2,10 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import Header from './../Header';
-// import SERVICES from './list-of-services';
+import ServiceList from './service-list'
+
 import axios from 'axios/index';
 
 class App extends Component {
@@ -40,12 +40,6 @@ class App extends Component {
       });
   }
 
-  componentWillUnmount() {
-    if (this._asyncRequest) {
-      this._asyncRequest.cancel();
-    }
-  }
-
   animate() {
     console.log('ANIMATE');
     /* this.el.parentNode.parentNode.animate(
@@ -71,31 +65,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header breadcrumbs={BREADCRUMBS} type={'page'} />
-        <div className="container service-list__container">
-          <div className="row">
-            {SERVICES.map((service, index) => {
-              let cols;
-              service.size === 'small' ? (cols = 4) : (cols = 12);
-              return (
-                <div key={index} className={`col-md-${cols}`}>
-                  <div className="card">
-                    <div className="card-body">
-                      <h5 className="card-title">{service.name}</h5>
-                      <p className="card-text">{service.description}</p>
-                      <Link
-                        ref={e => (this.el = e)}
-                        onClick={this.animate.bind(this)}
-                        to={`/services/${service.id}`}
-                        className="btn btn-primary text-light">
-                        Далее
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <ServiceList services={SERVICES}/>
       </Fragment>
     );
   }

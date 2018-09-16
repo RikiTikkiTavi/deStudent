@@ -1,13 +1,13 @@
-import resolvers from './resolvers';
+import resolvers from "./resolvers";
 
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 
 function configurePassport() {
   passport.use(
     new LocalStrategy(
       {
-        usernameField: 'email'
+        usernameField: "email"
       },
       (email, password, done) => {
         // RETURNS ONLY 1 ARGUMENT
@@ -35,7 +35,7 @@ function configurePassport() {
   passport.deserializeUser((safeUser, done) => {
     resolvers.Query.getOneUser({ id: safeUser.id }).then(user => {
       let err;
-      user === null ? (err = 'Error: no such user') : (err = null);
+      user === null ? (err = "Error: no such user") : (err = null);
       done(err, safeUser);
     });
   });

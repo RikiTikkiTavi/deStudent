@@ -1,6 +1,8 @@
+// TODO: Modify TEXT fields to json
+
 module.exports = (sequelize, DataTypes) =>
   sequelize.define(
-    'service_content',
+    'service',
     {
       id: {
         type: DataTypes.INTEGER,
@@ -34,6 +36,6 @@ module.exports = (sequelize, DataTypes) =>
       }
     },
     {
-      tableName: 'service_content'
+      tableName: 'service'
     }
   );

@@ -31,8 +31,8 @@ dbConnection
 
 defineModels(dbConnection, Sequelize);
 
-const ServiceContent = dbConnection.models.service_content;
+const Service = dbConnection.models.service;
 const ServiceForm = dbConnection.models.service_form;
 const User = dbConnection.models.user;
 
-export { ServiceContent, ServiceForm, User };
+export { Service, ServiceForm, User };

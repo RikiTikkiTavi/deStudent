@@ -1,16 +1,28 @@
-import { ServiceContent, ServiceForm, User } from './connectors';
+import { Service, ServiceForm, User } from "./connectors";
+import Sequelize from "sequelize";
+
+const Op = Sequelize.Op;
 
 const resolvers = {
   Query: {
-    getServiceContent(args) {
-      return ServiceContent.find({ where: args });
+    getService(args) {
+      return Service.find({ where: args });
     },
     getOneUser(args) {
       return User.findOne({ where: args });
     },
     getListOfServices(args) {
-      return ServiceContent.findAll({
-        attributes: ['id', 'name', 'description', 'size']
+      return Service.findAll({
+        attributes: ["id", "name", "description", "size"]
+      });
+    },
+    getServices(args) {
+      return Service.findAll({
+        where: {
+          id: {
+            [Op.or]: args
+          }
+        }
       });
     }
   },

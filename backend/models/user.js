@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) =>
       name: {
         type: DataTypes.TEXT,
         allowNull: true
+      },
+      services: {
+        type: DataTypes.TEXT,
+        allowNull: true
       }
     },
     {

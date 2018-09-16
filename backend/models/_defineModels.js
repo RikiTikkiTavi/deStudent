@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import serviceContentModel from './service_content';
+import serviceModel from './service';
 import serviceFormModel from './service_form';
 import userModel from './user';
 
 const defineModels = (db, Sequelize) => {
-  serviceContentModel(db, Sequelize);
+  serviceModel(db, Sequelize);
   serviceFormModel(db, Sequelize);
   userModel(db, Sequelize);
   db.sync({ force: false });
